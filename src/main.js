@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
+import { Button } from 'ant-design-vue'
+Vue.component(Button.name, Button)
 
 new Vue({
   router,

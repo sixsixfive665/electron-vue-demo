@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Vue logo" src="../assets/logo.png" @click="backLogin">
   </div>
 </template>
 
@@ -14,6 +14,9 @@ export default {
   methods: {
     changeWindowSize () {
       ipcRenderer.send('changWindowSize')
+    },
+    backLogin () {
+      this.$router.push('/login')
     }
   }
 }

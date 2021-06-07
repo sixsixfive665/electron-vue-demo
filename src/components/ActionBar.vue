@@ -41,15 +41,15 @@ export default {
  -webkit-app-region: no-drag
 
 .left_area
- width 1px
+ width 2px
  height 35px
 
 .top_area
- height 1px
+ height 2px
 
 .action_bar_title
  -webkit-app-region: drag
- line-height 35px
+ line-height 33px
  flex 1
 
 .min_btn

@@ -1,5 +1,5 @@
 <template>
-  <button @click="login">一键登录</button>
+  <a-button type="primary" @click="login">一键登录</a-button>
 </template>
 
 <script>
