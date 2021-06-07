@@ -1,6 +1,10 @@
 <template>
   <div class="action_bar">
-      <div class="action_bar_title">萨达昂贵的风格123qe12阿萨德1</div>
+      <span class="action_bar_no_drag left_area"></span>
+      <div class="action_bar_title">
+          <div class="action_bar_no_drag top_area"></div>
+          薛定谔の🦌 Demo
+      </div>
       <span class="min_btn" @click="minimize">一</span>
       <span class="min_btn" @click="close">X</span>
   </div>
@@ -31,10 +35,21 @@ export default {
  top 0
  left 0
  height 35px
- background pink
+ background #665665
+
+.action_bar_no_drag
+ -webkit-app-region: no-drag
+
+.left_area
+ width 1px
+ height 35px
+
+.top_area
+ height 1px
 
 .action_bar_title
  -webkit-app-region: drag
+ line-height 35px
  flex 1
 
 .min_btn
@@ -43,6 +58,6 @@ export default {
  line-height 35px
  cursor default
  &:hover
-  background blue
+  background #556556
 
 </style>

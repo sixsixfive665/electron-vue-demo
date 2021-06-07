@@ -1,21 +1,20 @@
 <template>
   <div class="home">
-    <ActionBar />
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-import ActionBar from '@/components/ActionBar'
-
+const { ipcRenderer } = require('electron')
 export default {
   name: 'Home',
-  components: {
-    HelloWorld,
-    ActionBar
+  mounted () {
+    this.changeWindowSize()
+  },
+  methods: {
+    changeWindowSize () {
+      ipcRenderer.send('changWindowSize')
+    }
   }
 }
 </script>

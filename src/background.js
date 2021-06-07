@@ -15,8 +15,8 @@ protocol.registerSchemesAsPrivileged([
 async function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 400,
+    height: 550,
     frame: false,
     webPreferences: {
 
@@ -83,10 +83,17 @@ if (isDevelopment) {
   }
 }
 
+//  关闭窗口
 ipcMain.on('close', () =>
   win.close()
 )
 
+//  窗口最小化
 ipcMain.on('minimize', () =>
   win.minimize()
+)
+
+//  变更窗口大小
+ipcMain.on('changWindowSize', () =>
+  win.setSize(1050, 700)
 )
