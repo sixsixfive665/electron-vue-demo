@@ -38,7 +38,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "less": "~2.7.3",
-    "less-loader": "~5.0.0",
+    "less-loader": "~6.0.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-electron-builder": "~2.0.0",
