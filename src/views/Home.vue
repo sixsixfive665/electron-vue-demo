@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <iframe src="http://www.baidu.com" name="ifrm" id="ifrm" width="100%" height="100%"></iframe>
-    <a-button @click="sendNotification">发送系统通知</a-button>
+    <div id="yourPage"></div>
   </div>
 </template>
 
@@ -11,22 +10,21 @@ export default {
   name: 'Home',
   mounted () {
     this.changeWindowSize()
+    // document.getElementById('yourPage').innerHTML= "<object type='text/html' data='https://192.168.100.20:8080/river/admin/BeamShow/index' width='100%' height='100%'></object>"
+    document.getElementById('yourPage').innerHTML= "<object type='text/html' data='https://bbs.csdn.net/topics/390113679' width='100%' height='100%'></object>"
   },
   methods: {
     changeWindowSize () {
-      ipcRenderer.send('changWindowSize')
-    },
-    backLogin () {
-      this.$router.push('/login')
-    },
-    sendNotification () {
-      const myNotification = new Notification('标题', {
-        body: '通知正文内容'
-      })
-      myNotification.onclick = () => {
-        console.log('通知被点击')
-      }
+      ipcRenderer.send('maximize')
     }
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.home
+ height 100%
+
+#yourPage
+ height 100%
+</style>

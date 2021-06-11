@@ -6,7 +6,7 @@ import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 let win
-
+// console.log(process.versions.chrome)
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
   { scheme: 'app', privileges: { secure: true, standard: true } }
@@ -91,6 +91,11 @@ ipcMain.on('close', () =>
 //  窗口最小化
 ipcMain.on('minimize', () =>
   win.minimize()
+)
+
+//  窗口最大化
+ipcMain.on('maximize', () =>
+  win.maximize()
 )
 
 //  变更窗口大小

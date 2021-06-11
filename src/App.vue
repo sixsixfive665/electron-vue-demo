@@ -16,6 +16,8 @@ export default {
 </script>
 <style lang="stylus">
 #app
+  height 100%
+  overflow hidden
   box-sizing border-box
   font-family Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
