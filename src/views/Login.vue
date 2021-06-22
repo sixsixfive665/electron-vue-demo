@@ -1,5 +1,7 @@
 <template>
-  <a-button type="primary" @click="login">一键登录</a-button>
+  <div class="container">
+    <a-button type="primary" @click="login">一键登录</a-button>
+  </div>
 </template>
 
 <script>
@@ -13,5 +15,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-
+.container
+ padding-top 50px
 </style>

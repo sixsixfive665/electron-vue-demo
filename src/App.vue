@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ActionBar />
+    <!-- <ActionBar /> -->
     <router-view/>
   </div>
 </template>
@@ -24,5 +24,5 @@ export default {
   -moz-osx-font-smoothing grayscale
   text-align center
   color #2c3e50
-  padding-top 35px
+  // padding-top 35px
 </style>

@@ -3,7 +3,7 @@
       <span class="action_bar_no_drag left_area"></span>
       <div class="action_bar_title">
           <div class="action_bar_no_drag top_area"></div>
-          薛定谔の🦌 Demo
+          星天海洋
       </div>
       <span class="min_btn" @click="minimize">一</span>
       <span class="min_btn" @click="close">X</span>
